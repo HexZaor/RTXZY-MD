@@ -905,7 +905,18 @@ module.exports = {
             if (opts['nyimak']) return
             if (!m.fromMe && opts['self']) return
             if (opts['pconly'] && m.chat.endsWith('g.us')) return
-            if (opts['gconly'] && !m.chat.endsWith('g.us')) return
+            if (opts['gconly']) {
+                this.gconly = this.gconly || {};       
+                const getMember = await (await this.groupMetadata(global.jid)).participants
+                const findMember = getMember.map(v => v.id).includes(m.sender)         
+                if (!findMember) {
+                    if (!this.gconly[m.chat]) {
+                        await this.reply(m.chat,` ⚠️ Anda harus masuk ke grup bot terlebih dahulu agar dapat menggunakan bot di chat pribadi. \n${global.gc}`, m);
+                        this.gconly[m.chat] = true;
+                    }
+                    return;
+                }
+              }
             if (opts['swonly'] && m.chat !== 'status@broadcast') return
             if (typeof m.text !== 'string') m.text = ''
             if (opts['queque'] && m.text) {
@@ -1196,7 +1207,7 @@ module.exports = {
                             title: action === 'add' ? 'Selamat Datang' : 'Selamat tinggal',
                             body: global.wm,
                             thumbnailUrl: pp,
-                            sourceUrl: 'https://api.botcahx.eu.org',
+                            sourceUrl: 'https://www.instagram.com/anshorfalahi',
                             mediaType: 1,
                             renderLargerThumbnail: true 
                             }}}, { quoted: null })

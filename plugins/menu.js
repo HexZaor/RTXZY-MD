@@ -168,8 +168,8 @@ let handler = async (m, { conn, usedPrefix: _p, args = [], command }) => {
                         mediaType: 1,
                         previewType: 0,
                         renderLargerThumbnail: true,
-                        thumbnailUrl: 'https://telegra.ph/file/3a34bfa58714bdef500d9.jpg',
-                        sourceUrl: 'https://whatsapp.com/channel/0029Va8ZH8fFXUuc69TGVw1q'
+                        thumbnailUrl: 'https://i.pinimg.com/736x/a6/60/4b/a6604b737cea9897eb7d2ab6bb405482.jpg',
+                        sourceUrl: 'https://chat.whatsapp.com/HPrthdWC0cTCLSvokQd8Y6'
                     }
                 }, 
                 mentions: [m.sender]
@@ -241,8 +241,8 @@ let handler = async (m, { conn, usedPrefix: _p, args = [], command }) => {
                         mediaType: 1,
                         previewType: 0,
                         renderLargerThumbnail: true,
-                        thumbnailUrl: 'https://telegra.ph/file/3a34bfa58714bdef500d9.jpg',
-                        sourceUrl: 'https://whatsapp.com/channel/0029Va8ZH8fFXUuc69TGVw1q'
+                        thumbnailUrl: 'https://i.pinimg.com/736x/a6/60/4b/a6604b737cea9897eb7d2ab6bb405482.jpg',
+                        sourceUrl: 'https://chat.whatsapp.com/HPrthdWC0cTCLSvokQd8Y6'
                     }
                 }, 
                 mentions: [m.sender]
