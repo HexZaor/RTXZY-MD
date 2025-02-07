@@ -1,6 +1,6 @@
 global.owner = ['6285348242252', '6285246133184']  
 global.mods = ['6285348242252', '6285246133184'] 
-global.prems = ['6285348242252',  '6285246133184']
+global.prems = ['6285348242252', '6285246133184']
 global.nameowner = 'AnshorXD'
 global.numberowner = '6285348242252' 
 global.mail = 'mr.4n5@hi2.in' 
